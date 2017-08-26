@@ -1,0 +1,35 @@
+:host {
+    article {
+        padding: 100px 200px 100px 100px;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        color: #FFFFFF;
+        background: linear-gradient(rgba(34, 34, 34, 0.70),rgba(34, 34, 34, 0.70)), url('assets/images/auth-bg.jpg') no-repeat;
+        
+        h2 {            
+            font-size: 38px;
+            font-weight: 300;
+            line-height: 50px;
+            text-transform: capitalize;
+            margin-bottom: 35px;
+            margin-top: 0;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 23px;
+            font-weight: normal;
+
+            &::first-letter {
+                text-transform: capitalize;
+            }
+        }
+    }
+
+    figure,
+    #wrap-subview {
+        overflow: hidden;
+    }
+}

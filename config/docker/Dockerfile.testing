@@ -1,0 +1,25 @@
+# FROM /__IMAGE__/
+FROM projectone/portal-base
+
+# Copying Project from Local
+COPY ./ /home/node
+WORKDIR /home/node
+
+# Docker Entrypoint script
+RUN set -ex \
+    && cp /home/node/config/docker/docker-entrypoint.sh /usr/local/bin/ \
+    && chmod 755 /usr/local/bin/docker-entrypoint.sh 
+
+# Installing App Dependencies
+RUN set -ex  \
+    && npm -v \
+    && ls -l \
+    && npm install  \
+    && npm rebuild node-sass
+    # && npm install gulp-cli protractor \
+    # && ./node_modules/.bin/gulp driver-update 
+    
+# ENTRYPOINT ["docker-entrypoint.sh"]
+
+# CMD ["app:test"]
+CMD ["npm", "run", "serve:jit"]

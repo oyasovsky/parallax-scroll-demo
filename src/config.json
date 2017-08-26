@@ -1,0 +1,52 @@
+{
+	"production": 0,
+	"portal": {},
+	"api": {
+		"route": "http://localhost:8080/",
+		"metadata": {
+			"system": {
+				"app_version": "api/v3/app_version",
+				"status_page": "api/v3/status_page"
+			},
+			"config": "api/v3/config_metadata",
+			"user": {
+				"get": "layouts/sidebar?type=user_metadata"
+			}
+		},
+		"user": {
+			"get": "users/user"
+		},
+		"projects": {
+			"get": "projects",
+			"sidebar": "layouts/sidebar",
+			"favorite": {
+				"get": "layouts/sidebar?type=favorite",
+				"add": "explore/projects/favorite?status=add",
+				"remove": "explore/projects/favorite?status=remove"
+			},
+			"recent": {
+				"get": "layouts/sidebar?type=recent",
+				"limit": 5
+			}
+		},
+		"project":{
+			"get": "project"
+		},
+		"login": {
+			"get": "users/sign_in",
+			"post": "users/sign_in"
+		},
+		"logout": {
+			"get": "users/sign_out",
+			"delete": "users/sign_out"
+		},
+		"password": {
+			"get": "users/password/new",
+			"post": "users/password"
+		},
+		"register": {
+			"get": "users/sign_up",
+			"post": "users"
+		}
+	}
+}

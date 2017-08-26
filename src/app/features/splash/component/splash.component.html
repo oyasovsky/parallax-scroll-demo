@@ -1,0 +1,21 @@
+<div id="solar-system" #solarsystem>
+    <section parallax [config]="{parallaxInitVal: -100, parallaxRatio: .5}" id="planet1">
+        <div class="planet-orbit"><img src="/assets/images/planet2.png" alt=""></div>
+        <div class="tiny-stars"><img src="/assets/images/tinystars.svg" alt=""></div>
+        <div class="tiny-stars middle-stars"><img src="/assets/images/smallstars.svg" alt=""></div>
+    </section>
+    <section parallax id="asteroid1" [config]="{
+        cssProperty: 'backgroundPositionX',
+	    parallaxRatio: 3,
+        initialValue: 1500
+    }" class="asteroids-right" #asteroid1>
+    </section>
+    <section parallax [config]="{
+        cssProperty: 'backgroundPositionY',
+	    parallaxRatio: 3,
+        initialValue: 1500
+        }" id="rocks1">
+        <!--<div class="tiny-stars middle-stars"><img src="/assets/images/smallstars.svg" alt=""></div>-->
+    </section>
+</div>
+<img id="rocket" src="/assets/images/rocket.png"/>

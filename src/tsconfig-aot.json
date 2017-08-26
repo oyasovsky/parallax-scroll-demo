@@ -1,0 +1,13 @@
+{
+  "extends": "../tsconfig",
+  "compilerOptions": {
+    "outDir": "lib",
+    "rootDir": ".",
+    "mapRoot": "",
+    "baseUrl": ""
+  },
+  "exclude": [
+    "**/*.spec.ts",
+    "main.ts"
+  ]
+}
