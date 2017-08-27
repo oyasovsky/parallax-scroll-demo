@@ -27,12 +27,25 @@
     #planet1 {
         padding-top: 50%;
         background-image: url( "/assets/images/space_sun.png" );
-        background-size: 25%;
+        background-size: 50%;
         background-repeat: no-repeat;
         height: 900px;
 
-        .tiny-stars img {
-            height: 200px;
+        .planet-orbit {
+            position: absolute;
+            top: 150%;
+            left: 50px;
+            img {
+                height: 15%;
+            }
+        }
+
+        .tiny-stars {
+            top: calc( 150% - 30px);
+            left: 555px;
+            img {
+                height: 25%;
+            }
         }
     }
 
@@ -185,7 +198,7 @@
     .tiny-stars {
         position: absolute;
         top: 150%;
-        left: 50%;
+        left: 575px;
         margin-left: -528px;
         z-index: 1;
         -webkit-animation: infinite-spinning 40s infinite linear;
@@ -203,14 +216,4 @@
         animation: infinite-spinning 30s infinite linear
     }
 
-    .planet-orbit {
-        position: absolute;
-        top: 150%;
-        img {
-            height: 100px;
-            position: relative;
-            left: 80px;
-            top: 50px;
-        }
-    }
 }
